@@ -1,0 +1,46 @@
+import pandas as pd
+
+def excel_to_csv(excel_file_path, csv_file_path, sheet_name=0):
+    """
+    Converts an Excel file to a CSV file.
+
+    Parameters:
+    - excel_file_path: str, path to the input Excel file (.xlsx or .xls)
+    - csv_file_path: str, path to the output CSV file
+    - sheet_name: str or int, name or index of the sheet to convert (default is the first sheet)
+    """
+    try:
+        # Load the Excel sheet into a DataFrame
+        df = pd.read_excel(excel_file_path, sheet_name=sheet_name)
+
+        # Save the DataFrame to a CSV file
+        df.to_csv(csv_file_path, index=False)
+
+        print(f"Successfully converted '{excel_file_path}' to '{csv_file_path}'.")
+
+    except Exception as e:
+        print(f"Error: {e}")
+
+
+import pandas as pd
+
+def excel_to_csv(excel_file_path, csv_file_path, sheet_name=0):
+    """
+    Converts an Excel file to a CSV file.
+
+    Parameters:
+    - excel_file_path: str, path to the input Excel file (.xlsx or .xls)
+    - csv_file_path: str, path to the output CSV file
+    - sheet_name: str or int, name or index of the sheet to convert (default is the first sheet)
+    """
+    try:
+        # Load the Excel sheet into a DataFrame
+        df = pd.read_excel(excel_file_path, sheet_name=sheet_name)
+
+        # Save the DataFrame to a CSV file
+        df.to_csv(csv_file_path, index=False)
+
+        print(f"Successfully converted '{excel_file_path}' to '{csv_file_path}'.")
+
+    except Exception as e:
+        print(f"Error: {e}")
